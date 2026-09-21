@@ -1,0 +1,47 @@
+
+.hero {
+  padding: 60px 0;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:  url('./assets/images/bg-ball.png') 50% / cover no-repeat,  url('./assets/images/bg-snow.png') 50% / cover no-repeat, $primary;
+}
+
+.hero-content {
+  padding: 60px 0;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  *{
+    text-align: center;
+    color: $static-white;
+  }
+}
+
+.hero-link{
+  text-decoration: none;
+  padding: 20px 32px;
+  border-radius: 20px;
+  background-color: $dark;
+  align-self: center;
+}
+
+@media(hover:hover) {
+  .hero-link:hover {
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+    color: $dark;
+    background-color: $static-white;
+  }
+}
+
+@media(hover:none) {
+  .hero-link:active {
+    color: $dark;
+    background-color: $static-white;
+  }
+}
+
+

@@ -1,0 +1,227 @@
+header {
+  box-sizing: border-box;
+  container-name: header;
+  container-type: inline-size;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 82px;
+  background-color: $static-white;
+}
+
+.logo {
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  display: flex;
+  gap: 8px;
+  padding: 8px 20px;
+  align-items: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.nav-links{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+
+.active-link{
+  background-color: $primary10;
+  color: $primary;
+}
+
+footer{
+  padding: 60px 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contacts-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.contacts-card{
+  background-color: $content-bg;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  border-radius: 20px;
+  text-decoration: none;  
+}
+
+.socials-n-copyright{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.socials-container{
+  display: flex;
+  gap: 12px;
+  a {
+    padding: 8px;
+  }
+}
+
+
+.burger-container, 
+.nav-burger{
+    display: none;
+  }
+
+@media (max-width: 1439px) {
+  footer {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .contacts-container{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+@media (width < 769px) {
+  header {
+    padding: 12px 8px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .burger-container{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    padding: 0px 10px;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: gap 0.8s ;
+  }
+
+  .burger-line {
+    background-color: $dark;
+    height: 1px;
+    width: 20px;
+    transition: transform 0.8s;
+  }
+
+  .burger-container_active{
+    height: 40px;
+    width: 40px;
+    gap: 0;
+  }
+
+  .ver{
+    transform: rotate(45deg);
+    transition: transform 0.8s;
+  }
+  .hor{
+    transform: rotate(-45deg);
+    transition: transform 0.8s;
+  }
+
+  .nav-burger {
+    position: fixed;
+    background-color: $static-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    top: 62px;
+    z-index: 100;
+    left: 100vW;
+    
+  }
+
+  .nav-burger_active {
+    left: 0;
+    z-index: 100;
+  }
+
+
+}
+@media (hover: hover) {
+  
+  .logo:hover {
+  cursor: url(./assets/svg/pointinghand.svg), auto;
+  }
+
+  .active-link:hover, 
+  .nav-link:hover{
+    background-color: $primary10;
+    color: $primary;
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+    &:visited{
+    text-decoration: none;
+    }
+  }
+
+  .active-link:hover{
+    cursor: default;
+  }
+
+  .contacts-card:hover,
+  .socials-link:hover,
+  .made:hover,
+  .made:hover {
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+    color: $primary;
+    *{
+      color: $primary;
+    }
+  }
+
+  .socials-link:hover svg path {
+    stroke: $primary;
+  }
+
+  .burger-container:hover{
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+  }
+
+}
+@media (hover: none) {
+  .active-link:active, 
+  .nav-link:active {
+    background-color: $primary10;
+    color: $primary;
+  }
+  
+  .contacts-card:active {
+    *{
+      color: $primary;
+    }
+  }
+
+  .socials-link:active svg path {
+    stroke: $primary;
+  }
+
+  .made:active {
+    color: $primary;
+  }
+
+  .body_burger-padding {
+    padding: 0 17px 0 0 !important;
+  }
+}

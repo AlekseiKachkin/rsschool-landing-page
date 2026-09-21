@@ -1,0 +1,32 @@
+.best-gifts{
+  padding: 60px 8px;
+  background: url('./assets/images/bg-snow.png') 50% / cover no-repeat, $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.best-gifts_label{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  *{color: $static-white;}
+}
+
+.gifts-container{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: padding 0s;
+}
+
+@media (max-width: 1439px) and (min-width: 970px) {
+  .gifts-container{
+    padding-left: 16.5%;
+    padding-right: 16.5%;
+    transition: padding 0s;
+  }
+}
