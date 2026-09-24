@@ -1,0 +1,112 @@
+
+.gifts{
+  border-radius: 20px;
+  padding: 60px 8px;
+  background-color: $primary;
+  background-image: url('./assets/images/bg-garland.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  .header1{
+    max-width: 426px;
+    color: $static-white;
+    text-align: center;
+  }
+}
+.tabs-container{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.tab{
+  color: $static-white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: none;
+}
+
+.active-tab {
+  background-color: $static-white20;
+  cursor: default;
+  transition: background-color 2.5s;
+}
+
+.gifts-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.return-btn {
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .return-btn {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 8px;
+    background-color: $static-white;
+    border: 1px solid $primary;
+    transition: border 0s,
+                border-radius 0s,
+                box-shadow 0.2s;
+  }
+  .return-btn:active {
+    box-shadow: 0px 0px 6px 2px $primary;
+    transition: box-shadow 0s;
+  }
+  .return-btn_disabled{
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .tab {
+    padding: 12px 8px;
+  }
+  .tabs-container {
+    gap: 0;
+  }
+}
+
+@media(hover:hover) {
+  .return-btn:hover {
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+  }
+
+  .tab:hover{
+    background-color: $static-white20;
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+  }
+
+  .active-tab:hover {
+    cursor: default;
+  }
+}
+
+@media(hover:none) {
+  .tab:active{
+    background-color: $static-white20;
+  }
+}
+

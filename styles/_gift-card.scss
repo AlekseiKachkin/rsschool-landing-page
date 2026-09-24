@@ -1,0 +1,207 @@
+.gift-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background-color: $content-bg;
+  text-decoration: none;
+  .gift-img {
+    min-height: 230px;
+    width: 100%;
+  }
+
+  .for-health-img {
+    background:no-repeat center / 100% url('./assets/images/gift-for-health.png') ;
+  }
+
+  .for-work-img {
+    background:no-repeat center / 100% url('./assets/images/gift-for-work.png') ;
+  }
+
+  .for-harmony-img {
+    background:no-repeat center / 100% url('./assets/images/gift-for-harmony.png') ;
+  }
+}
+
+.close-btn {
+  display: none;
+}
+
+.card-info {
+  height: 100%;
+  background-color: $static-white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.gift-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 8px;
+  .work{
+    color: $tag-purple;
+  }
+
+  .health {
+    color: $tag-green;
+  }
+
+  .harmony {
+    color: $tag-pink;
+  }
+  .paragraph {
+    display: none;
+  }
+}
+
+.super-container {
+  display: none;
+}
+
+.gift-card_wrapper {
+  transition: background-color 0.5s,
+              width 0.5s,
+              height 0.5s;
+}
+
+#selected-card {
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  margin: 0 8px;
+
+  .close-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.5s;
+      & svg path {
+        stroke: $dark;
+        transition: stroke 0.5s;
+      }
+  }
+
+  .for-health-img {
+    background:no-repeat center / auto 130% url('./assets/images/gift-for-health.png') ;
+  }
+
+  .for-work-img {
+    background:no-repeat center / auto 130% url('./assets/images/gift-for-work.png') ;
+  }
+
+  .for-harmony-img {
+    background:no-repeat center / auto 130% url('./assets/images/gift-for-harmony.png') ;
+  }
+
+  .gift-text .paragraph {
+      display: block;
+    }
+
+  .super-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .line-grid{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .line-label {
+    flex: 1 13 184px;
+    text-transform: capitalize;
+  }
+
+  .line-value {
+    flex: 0 0 40px;
+  }
+
+  .line-stars{
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    flex: 0 0 112px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.gift-card_wrapper:has(#selected-card){
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: rgba(24, 28, 41, 0.80);
+  transition: background-color 0.5s,
+              width 0.5s,
+              height 0.5s;
+} 
+
+
+body:has(#selected-card) {
+  overflow: hidden;
+}
+
+
+@media (hover:hover) {
+  
+  .gift-card:hover {
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+    & h3 {
+      color: $primary;
+    }
+  }
+  #selected-card:hover {
+    cursor: default;
+    & h3 {
+      color: $dark;
+    }
+  }
+  .close-btn:hover {
+    background-color: $primary10;
+    transition: background-color 0.5s;
+    cursor: url(./assets/svg/pointinghand.svg), auto;
+    & svg path {
+      stroke: $primary;
+      transition: stroke 0.5s;
+    }
+  }
+}
+
+@media (hover:none) {
+  .gift-card:active {
+    & .header3 {
+      color: $primary;
+    }
+  }
+  #selected-card:active {
+    & h3 {
+      color: $dark;
+    }
+  }
+  .close-btn:active {
+    background-color: $primary10;
+    & svg path {
+      stroke: $primary;
+    }
+  }
+}
+

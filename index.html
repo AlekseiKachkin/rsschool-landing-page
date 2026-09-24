@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="Image/x-icon" href="./assets/svg/X-Shop.ico" rel="icon">
+  <link rel="stylesheet" href="./home.css">
+  <script src="./consts.js" async type="module"></script>
+  <script src="./burger.js" async type="module"></script>
+  <script src="./slider.js" async type="module"></script>
+  <script src="./bestGifts.js" async type="module"></script>
+  <script src="./timer.js" async type="module"></script>
+  <script src="./bodyRightPadding.js" async type="module"></script>
+  <title>Home | Christmas Shop </title>
+</head>
+<body>
+  <header>
+    <a class="logo action-small" href="index.html">
+      <img src="./assets/svg/logo.svg" alt="snowflake">
+      the gifts
+    </a>
+    <nav class="nav-links">
+      <a href="./gifts.html" class="nav-link action-small">gifts</a>
+      <a href="#About" class="nav-link action-small">about</a>
+      <a href="#Best-Gifts" class="nav-link action-small">best</a>
+      <a href="#Contacts" class="nav-link action-small">contacts</a>
+    </nav>
+    <div class="burger-container" id="burger-icon">
+      <div class="burger-line" id="hor"></div>
+      <div class="burger-line" id="ver"></div>
+    </div>
+  </header>
+  <nav class="nav-burger" id="nav-burger">
+      <a href="./gifts.html" class="nav-link header2">gifts</a>
+      <a href="#About" class="nav-link header2">about</a>
+      <a href="#Best-Gifts" class="nav-link header2">best</a>
+      <a href="#Contacts" class="nav-link header2">contacts</a>
+  </nav>
+  <main class="wrapper" id="wrapper">
+    <section class="hero" id="Hero">
+      <div class="hero-content">
+        <p class="caption">Merry Christmas</p>
+        <div class="header1-wrapper"><h1 class="header1">Gift yourself the magic of new possibilities</h1></div>
+        <a class="action-small hero-link" href="./gifts.html">Explore Magical Gifts</a>
+        <p class="caption">and Happy New Year</p>
+      </div>
+    </section>
+    <section class="about" id="About">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-wrapper">
+            <p class="caption ">About</p>
+            <h2 class="header2">Unleash your inner superhero!</h2>
+            <p class="paragraph">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="./assets/images/santa.png" alt="santa" class="about-img">
+        </div>
+      </div>
+    </section>
+    <section class="slider" id="Slider">
+      <div class="slider-label">
+        <p class="caption">Become Happier!</p>
+        <h2 class="header2">in the new 2027</h2>
+      </div>      
+      <div class="slider-container" id="slider-container">
+        <div class="slider-card">
+          <p class="slider-text">Live</p>
+          <img src="./assets/images/snowman.png" alt="snowman" class="slider-img">
+        </div>
+        <div class="slider-card">
+          <p class="slider-text">create</p>
+          <img src="./assets/images/christmas-trees.png" alt="christmas-tree" class="slider-img">
+        </div>
+        <div class="slider-card">
+          <p class="slider-text">Love</p>
+          <img src="./assets/images/christmas-tree-ball.png" alt="christmas-tree-ball" class="slider-img">
+        </div>
+        <div class="slider-card">
+          <p class="slider-text">Dream</p>
+          <img src="./assets/images/fairytale-house.png" alt="fairytale-house" class="slider-img">
+        </div>
+      </div>
+      <div class="slider-controls">
+        <div class="controls-left" id="controls-left">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="arrow-left">
+          <path id="Left" d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          </svg>
+        </div>
+        <div class="controls-right" id="controls-right">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="arrow-right">
+            <path id="Right" d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="best-gifts" id="Best-Gifts">
+      <div class="best-gifts_label">
+        <p class="caption">Best Gifts</p>
+        <h2 class="header2">especially for you</h2>
+      </div>      
+      <div class="gifts-container" id="best-gifts-container">
+
+      </div>
+    </section>
+    <section class="CTA" id="CTA">
+      <div class="CTA-content">
+        <h2 class="header2">Ready to start your journey to a better version of yourself?</h2>
+        <a class="action-small hero-link" href="./gifts.html">Explore Magical Gifts</a>
+        <div class="timer-container">
+          <p class="caption">The New Year is Coming Soon...</p>
+          <div class="timer" id="timer">
+            <div class="days-container">
+              <h2 class="days-count header2" id="days">47</h2>
+              <p class="days-label header4">days</p>
+            </div>
+            <hr>
+            <div class="hours-container">
+              <h2 class="hours-count header2" id="hours">5</h2>
+              <p class="hours-label header4">hours</p>
+            </div>
+            <hr>
+            <div class="mins-container">
+              <h2 class="mins-count header2" id="minutes">34</h2>
+              <p class="mins-label header4">minutes</p>
+            </div>
+            <hr>
+            <div class="seconds-container">
+              <h2 class="seconds-count header2" id="seconds">12</h2>
+              <p class="seconds-label header4">seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="Contacts">
+    <div class="contacts-container">
+      <a class="contacts-card" href="tel:+375291112233">
+        <img class="contacts-img" src="./assets/svg/santa-claus.svg" alt="santa-claus">
+        <p class="contacts-info action-large" >+375 (29) 111-22-33</p>
+        <h3 class="contacts-us header3">call us</h3>
+      </a>
+      <a class="contacts-card" target="_blank" href="https://maps.app.goo.gl/qPadGt6DpRe9bDaa7">
+        <img class="contacts-img" src="./assets/svg/christmas-tree.svg" alt="christmas-tree">
+        <p  class="contacts-info action-large" >magic forest</p>
+        <h3 class="contacts-us header3">meet us</h3>
+      </a>
+      <a class="contacts-card" target="_top" href="mailto:lex6164665@gmail.com?subject=Christmas&body=Hi">
+        <img class="contacts-img" src="./assets/svg/snake.svg" alt="snake">
+        <p class="contacts-info action-large" >gifts@magic.com</p>
+        <h3 class="contacts-us header3">write us</h3>
+      </a>
+    </div>
+    <div class="socials-n-copyright">
+      <div class="socials-container">
+        <a target="_blank" href="https://web.telegram.org/a/" class="socials-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a target="_blank" href="https://facebook.com" class="socials-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a target="_blank" href="https://instagram.com" class="socials-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#181C29" stroke-width="1.5"/>
+            <path d="M17.5 6.51L17.51 6.49889" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a target="_blank" href="htpps://x.com" class="socials-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z" stroke="#181C29" stroke-width="1.5"/>
+          <path d="M20 3L4 21" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+      <p class="copyright paragraph">© Copyright 2026, All Rights Reserved</p>
+      <a target="_blank" href="https://rs.school/" class="made caption">Made in Rolling Scopes School</a>
+    </div>
+  </footer>
+</body>
+</html>

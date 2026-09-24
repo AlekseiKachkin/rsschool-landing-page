@@ -1,0 +1,64 @@
+@import './styles/reset.scss';
+@import './styles/_typography.scss';
+@import './styles/colors.scss';
+@import './styles/_header-footer.scss';
+@import './styles/hero.scss';
+@import './styles/about.scss';
+@import './styles/slider.scss';
+@import './styles/best-gifts.scss';
+@import './styles/CTA.scss';
+@import './styles/gift-card.scss';
+html {
+  scroll-behavior: smooth;
+  transition: scroll 1s ease-in-out 0.5s
+}
+* {
+  color: $dark;
+  box-sizing: border-box;
+    &:visited{
+    text-decoration: none;
+  }
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+* {
+  transition: stroke 0.5s ease-in-out,
+              background-color 0.5s ease-in-out,
+              color 0.5s ease-in-out;
+}
+@media(hover:hover ) {
+  *:hover{
+    transition: stroke 0.5s ease-in-out,
+                background-color 0.5s ease-in-out,
+                color 0.5s ease-in-out;
+  }
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: overflow 0s;
+  
+}
+
+.body_no-scroll {
+  overflow: hidden;
+  transition: overflow 0s;
+}
+
+header, footer, .wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+
+}
+
+.logo,
+.logo:hover {
+  background: none;
+  color: $dark;
+}
+
+img{
+  user-select: none;
+}
